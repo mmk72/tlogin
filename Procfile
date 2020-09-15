@@ -1,1 +1,1 @@
-web: gunicorn.tlogin.wsgi --log-file -
+web: gunicorn tlogin.wsgi --log-file -
