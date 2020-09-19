@@ -5,10 +5,10 @@
     <title>New Page</title>
   </head>
   <body>
-    <h5></h>
+    <a href="{% url 'home' %}"><h4>Back</h4></a>
+    <h1 style="color:blue">{{user.username}}</h1>
     {% for person in persons %}
-      <h5>{{person.first_name}} : {{person.last_name}}</h5>
-      <h5></h5>
-    {% endfor %}
+      <h5 style="color:green">{{person.first_name}} {{person.last_name}}</h5>
+    {% endfor %}    
   </body>
 </html>
