@@ -2,13 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Page</title>
   </head>
   <body>
     <a href="{% url 'home' %}"><h4>Back</h4></a>
-    <h1 style="color:blue">{{user.username}}</h1>
+    <h1 style="color:red">{{user.username}}</h1>
     {% for person in persons %}
-      <h5 style="color:green">{{person.first_name}} {{person.last_name}}</h5>
-    {% endfor %}    
+    <div class="row">
+      <div class="col-2">
+        <img src="{{ person.img.url}}" width="150" height="150" alt=""/>
+      </div>
+      <div class="col-6">
+        <h5 style="color:green">{{person.first_name}} {{person.last_name}}</h5>
+      </div>
+    </div>
+    <hr>
+    {% endfor %}
   </body>
 </html>
