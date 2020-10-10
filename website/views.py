@@ -11,7 +11,7 @@ def home(request):
         if user is not None:
             auth.login(request, user)
             persons = Person.objects.all()
-            return render(request, 'newpage.html', {'user':user, 'persons':persons})
+            return render(request, 'newpage.html', {'persons':persons})
         else:
             return redirect('home')
     else:
